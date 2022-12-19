@@ -1,0 +1,60 @@
+REQUEST:
+
+POST /consultaDados HTTP/1.1
+Host: https://www.empresaX.com.br/
+Content-Type: application/soap+xml; charset=utf-8
+Content-Length: nnn
+
+
+<?xml version="1.0"?>
+<soap:Envelope
+   xmlns:soap="http://www.w3.org/2001/12/s oap-envelope"
+   soap:encodingStyle="http://www.w3.org/2 001/12/soap-encoding">
+
+   <soap:Header>
+      <a:authentication xmlns:a=”https://www.empresaX.com.br/soap/authentication/”
+      SOAP-ENV:mustUndestrand=”1”>
+          <a:userpermission>admin</a:userpermission>
+      </a:authentication>
+   </soap:Header>
+   
+   <soap:Body xmlns:m="http://www.exampleX.com.br/consultaDados">   
+	<m:consultaDadosRequest>
+         <m:ClienteNome>Arthur</m:ClienteNome>
+      </m:consultaDadosRequest>
+   </soap:Body>
+
+</soap:Envelope>
+
+
+
+RESPONSE:
+
+HTTP/1.1 200 OK
+Content-Type: application/soap+xml; charset=utf-8
+Content-Length: nnn
+
+<?xml version="1.0"?>
+
+<soap:Envelope
+xmlns:soap="http://www.w3.org/2003/05/soap-envelope/"
+soap:encodingStyle="http://www.w3.org/2003/05/soap-encoding">
+
+<soap:Header>
+    <a:authentication xmlns:a=”https://www.empresaX.com.br/soap/authentication/”
+SOAP-ENV:mustUndestrand=”1”>
+    <a:userpermission>admin</a:userpermission>
+    </a:authentication>
+</soap:Header>
+
+<soap:Body xmlns:m="http://www.empresaX.com.br/consultaDados">
+  <m:consultaDadosResponse>
+    <m:CPF>11111111111</m:CPF>
+    <m:Phone>81999999999</m:Phone>
+    <m:Endereco>Recife, Pernambuco, Bairro X, Rua Y, 11B</m:Endereco>
+  </m:consultaDadosResponse>
+</soap:Body>
+
+</soap:Envelope>
+
+
