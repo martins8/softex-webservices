@@ -12,7 +12,7 @@ import javax.jws.WebService;
     
 
 @WebService(endpointInterface = "webservicejavasoftex.CalculadoraServer")
-public class CalculadoraServerImpl implements CalculadoraServer {
+public class CalculadoraServerl implements CalculadoraServer {
 
   public float somar(float num1, float num2) {
     return num1 + num2;
