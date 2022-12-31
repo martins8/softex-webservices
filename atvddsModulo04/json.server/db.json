@@ -1,0 +1,18 @@
+{
+  "alunos": [
+    {
+      "id": 1,
+      "nome": "arthur",
+      "serie": "1º ano",
+      "nota": 7,
+      "aprovado": true
+    },
+    {
+      "id": 2,
+      "nome": "martins",
+      "serie": "2º ano",
+      "nota": 6,
+      "aprovado": false
+    }
+  ]
+}
